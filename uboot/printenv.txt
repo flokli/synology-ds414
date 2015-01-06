@@ -1,0 +1,81 @@
+CASset=min
+MALLOC_len=5
+MPmode=smp
+amp_enable=no
+autoload=no
+baudrate=115200
+boot_order=hd_scr hd_img pxe net_img net_scr
+bootargs=console=ttyS0,115200 ip=off initrd=0x8000040,8M root=/dev/md0 rw syno_hw_v1
+bootargs_dflt=$console $mtdparts $bootargs_root nfsroot=$serverip:$rootpath ip=$ipal
+bootargs_end=:10.4.50.254:255.255.255.0:DSMP:eth0:none
+bootargs_root=root=/dev/nfs rw
+bootcmd=bootm 0xf40d0000 0xf43a0000
+bootcmd_auto=stage_boot $boot_order
+bootcmd_lgcy=tftpboot 0x2000000 $image_name; setenv bootargs $bootargs_dflt; bootm  
+bootdelay=3
+cacheShare=no
+console=console=ttyS0,115200
+device_partition=0:1
+disL2Cache=yes
+disL2Prefetch=yes
+disaMvPnp=no
+eeeEnable=no
+enaAutoRecovery=yes
+enaClockGating=no
+enaCpuStream=no
+enaDCPref=yes
+enaFPU=yes
+enaICPref=yes
+enaLPAE=no
+enaWrAllo=no
+eth1addr=00:50:43:02:00:00
+eth1mtu=1500
+eth2addr=00:50:43:00:00:02
+eth2mtu=1500
+eth3addr=00:50:43:00:02:02
+eth3mtu=1500
+ethact=egiga0
+ethaddr=00:50:43:02:02:00
+ethmtu=1500
+ethprime=egiga0
+fdt_addr=2040000
+ide_path=/
+image_name=uImage
+initrd_name=uInitrd
+ipaddr=10.4.50.165
+kernel_addr_r=2080000
+lcd0_enable=0
+lcd0_params=640x480-16@60
+lcd_panel=0
+loadaddr=0x02000000
+loads_echo=0
+mvNetConfig=mv_net_config=4,(00:50:43:11:11:11,0:1:2:3),mtu=1500
+mv_pon_addr=00:50:43:00:00:02
+netbsd_en=no
+netmask=255.255.255.0
+netretry=no
+pcieTune=no
+pexMode=rc
+pxe_files_load=:default.arm-armadaxp-db:default.arm-armadaxp:default.arm
+pxefile_addr_r=3100000
+ramdisk_addr_r=2880000
+rcvrip=169.254.100.100
+rootpath=/srv/nfs/
+sata_delay_reset=0
+sata_dma_mode=yes
+script_addr_r=3000000
+script_name=boot.scr
+serverip=10.4.50.5
+setL2CacheWT=no
+standalone=fsload 0x2000000 $image_name;setenv bootargs $console $mtdparts root=/de;
+stderr=serial
+stdin=serial
+stdout=serial
+usb0Mode=host
+usb1Mode=host
+usb2Mode=device
+usbActive=0
+vxworks_en=no
+yuk_ethaddr=00:00:00:EE:51:81
+
+Environment size: 2271/65532 bytes
