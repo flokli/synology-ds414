@@ -1,0 +1,599 @@
+
+BootROM 1.20
+Booting from SPI flash
+High speed PHY - Version: 2.1.2 (COM-PHY-V20) 
+Update PEX Device ID 0x78230
+High speed PHY - Ended Successfully
+DDR3 Training Sequence - Ver 4.5.0 
+DDR3 Training Sequence - Ended Successfully 
+Status = MV_OK
+BootROM: Image checksum verification PASSED
+
+ __   __                      _ _
+|  \/  | __ _ _ ____   _____| | |
+| |\/| |/ _` | '__\ \ / / _ \ | |
+| |  | | (_| | |   \ V /  __/ | |
+|_|  |_|\__,_|_|    \_/ \___|_|_|
+         _   _     ____              _
+        | | | |   | __ )  ___   ___ | |_ 
+        | | | |___|  _ \ / _ \ / _ \| __| 
+        | |_| |___| |_) | (_) | (_) | |_ 
+         \___/    |____/ \___/ \___/ \__| 
+ ** LOADER **
+
+
+U-Boot 2011.12-SYNO-d7bdf8d-2013-12-11 (Dec 11 2013 - 17:58:54) Marvell version: v2011.12 2013_Q1.2
+
+Board: Synology AXP 78230 4-bay/2-bay
+SoC:   MV78230 B0
+       running 2 CPUs
+       Custom configuration
+CPU:   Marvell PJ4B (584) v7 (Rev 2) LE
+       CPU 0
+       CPU    @ 1333 [MHz]
+       L2     @ 667 [MHz]
+       TClock @ 250 [MHz]
+       DDR    @ 667 [MHz]
+       DDR 32Bit Width, FastPath Memory Access
+       DDR ECC Disabled
+DRAM:  1 GiB
+
+Map:   Code:		0x3fefb000:0x3ff9f630
+       BSS:		0x3ffef33c
+       Stack:		0x3f9eaef8
+       Heap:		0x3f9eb000:0x3fefb000
+
+MMC:   MRVL_MMC: 0
+SF: Detected M25P64 with page size 64 KiB, total 8 MiB
+*** Warning - bad CRC, using default environment
+
+PEX 0.0(0): Root Complex Interface, Detected Link X4, GEN 1.1
+PEX 1.0(1): Root Complex Interface, Detected Link X1, GEN 2.0
+PEX 1.1(2): Detected No Link.
+PEX 1.2(3): Detected No Link.
+FPU initialized to Run Fast Mode.
+USB 0: Host Mode
+USB 1: Host Mode
+USB 2: Device Mode
+Modules Detected:
+
+Synology Model: DS414r1
+Fan Status: Good
+
+Net:   egiga0 [PRIME], egiga1
+Press Ctrl+C to abort autoboot in 3 second
+## Booting kernel from Legacy Image at f40d0000 ...
+   Image Name:   Linux-3.2.40
+   Created:      2014-12-17  10:30:23 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2106136 Bytes = 2 MiB
+   Load Address: 00008000
+   Entry Point:  00008000
+   Verifying Checksum ... OK
+## Loading init Ramdisk from Legacy Image at f43a0000 ...
+   Image Name:   synology_armadaxp_ds414 5021
+   Created:      2014-12-26   6:21:43 UTC
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    3198645 Bytes = 3.1 MiB
+   Load Address: 08000000
+   Entry Point:  08000000
+   Verifying Checksum ... OK
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Booting Linux on physical CPU 0
+[    0.000000] Linux version 3.2.40 (root@build5) (gcc version 4.6.4 (Linaro GCC branch-4.6.4. Marvell GCC Dev 201310-2126.3d181f66 64K MAXPAGESIZE ALIGN) ) #5021 SMP Wed Dec 17 18:30:06 CST 2014
+[    0.000000] CPU: Marvell PJ4Bv7 Processor [562f5842] revision 2 (ARMv7), cr=10c53c7d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+[    0.000000] Machine: Marvell Armada XP Development Board
+[    0.000000] Using UBoot passing parameters structure
+[    0.000000] Reserving training memory: base=0x  (null) size=0x2800
+[    0.000000] Memory policy: ECC disabled, Data cache writealloc
+[    0.000000] SMP: init cpus
+[    0.000000] PERCPU: Embedded 7 pages/cpu @80dbc000 s5216 r8192 d15264 u32768
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 260096
+[    0.000000] Kernel command line: console=ttyS0,115200 ip=off initrd=0x8000040,8M root=/dev/md0 rw syno_hw_version=DS414r1 ihd_num=4 netif_num=2 flash_size=8 SataLedSpecial=1 HddHotplug=1
+[    0.000000] Synology Hardware Version: DS414r1-j
+[    0.000000] Internal HD num: 4
+[    0.000000] Internal netif num: 2
+[    0.000000] Special Sata LEDs.
+[    0.000000] Support HDD Hotplug.
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 1024MB = 1024MB total
+[    0.000000] Memory: 1025392k/1025392k available, 23184k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xc0800000 - 0xfa800000   ( 928 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0xc0000000   (1024 MB)
+[    0.000000]     modules : 0x7f000000 - 0x80000000   (  16 MB)
+[    0.000000]       .text : 0x80008000 - 0x804fd000   (5076 kB)
+[    0.000000]       .init : 0x804fd000 - 0x8052e460   ( 198 kB)
+[    0.000000]       .data : 0x80530000 - 0x80556720   ( 154 kB)
+[    0.000000]        .bss : 0x80556744 - 0x805b52ac   ( 379 kB)
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU dyntick-idle grace-period acceleration is enabled.
+[    0.000000] NR_IRQS:211
+[    0.000000] Initializing ArmadaXP SOC Timer 0
+[    0.000000] sched_clock: 32 bits at 25MHz, resolution 40ns, wraps every 171798ms
+[  147.558327] Calibrating delay loop... 1332.01 BogoMIPS (lpj=6660096)
+[  147.648240] pid_max: default: 32768 minimum: 301
+[  147.648369] Security Framework initialized
+[  147.648399] AppArmor: AppArmor initialized
+[  147.648456] Mount-cache hash table entries: 512
+[  147.648936] CPU: Testing write buffer coherency: ok
+[  147.649062] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[  147.649072] SMP: prepare CPUs (4 cores)
+[  147.649252] Setting Clocks for secondary CPUs
+[  147.650069] SMP: CPU 0 Waking up CPU 1
+[  147.658289] CPU1: Booted secondary processor
+[  147.698230] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[  147.698289] Brought up 2 CPUs
+[  147.698302] SMP: Total of 2 processors activated (2664.03 BogoMIPS).
+[  147.698972] devtmpfs: initialized
+[  147.702511] xor: measuring software checksum speed
+[  147.748198]    arm4regs  :  1291.600 MB/sec
+[  147.798195]    8regs     :   727.600 MB/sec
+[  147.848191]    32regs    :   937.200 MB/sec
+[  147.848198] xor: using function: arm4regs (1291.600 MB/sec)
+[  147.848379] NET: Registered protocol family 16
+[  147.850693] L0 cache Enabled
+[  147.850702] Speculative Prefetch Disabled
+[  147.850724] Aurora L2 Cache Enabled
+[  147.850904] Support IO coherency.
+[  147.954045] 
+[  147.954050]   Marvell Armada-XP Synology AXP 78230 Board -  Soc: MV78230 B0 LE
+[  147.954068]   Detected Tclk 250000000, SysClk 667000000, FabricClk 667000000, PClk 1333000000
+[  147.954075]   LSP version: linux-3.2.y-2013_Q1.2p2
+[  147.954080] 
+[  147.955340] Synology ArmadaXP 4-bay GPIO Init
+[  147.955820] registered dev#0 asa ehci_marvell
+[  147.956120] Marvell USB EHCI Host controller #0: bf8a9800
+[  147.956227] registered dev#1 asa ehci_marvell
+[  147.956522] Marvell USB EHCI Host controller #1: bf8a9600
+[  147.956633] registered dev#2 asa mv_udc
+[  147.956928] Marvell USB Gadget controller #2: bf8a9400
+[  147.964802] bio: create slab <bio-0> at 0
+[  148.128204] raid6: int32x1    160 MB/s
+[  148.298327] raid6: int32x2    252 MB/s
+[  148.468343] raid6: int32x4    300 MB/s
+[  148.638203] raid6: int32x8    331 MB/s
+[  148.638209] raid6: using algorithm int32x8 (331 MB/s)
+[  148.638749] SCSI subsystem initialized
+[  148.639973] Switching to clocksource axp_clocksource
+[  148.640214] AppArmor: AppArmor Filesystem Enabled
+[  148.641986] NET: Registered protocol family 2
+[  148.642093] IP route cache hash table entries: 32768 (order: 5, 131072 bytes)
+[  148.642351] TCP established hash table entries: 131072 (order: 8, 1048576 bytes)
+[  148.643356] TCP bind hash table entries: 65536 (order: 7, 524288 bytes)
+[  148.643822] TCP: Hash tables configured (established 131072 bind 65536)
+[  148.643829] TCP reno registered
+[  148.643838] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[  148.643862] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[  148.644011] NET: Registered protocol family 1
+[  148.644181] RPC: Registered named UNIX socket transport module.
+[  148.644190] RPC: Registered udp transport module.
+[  148.644195] RPC: Registered tcp transport module.
+[  148.644201] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[  148.644367] Trying to unpack rootfs image as initramfs...
+[  150.269669] rootfs image is not initramfs (no cpio magic); looks like an initrd
+[  150.283910] Freeing initrd memory: 8192K
+[  150.284011] PCI-E: Cheking physical bus #0 (controller #0): Enabled - Link UP
+[  150.284192] PCI-E: Cheking physical bus #1 (controller #4): Enabled - Link UP
+[  150.284352] PCI-E: Cheking physical bus #2 (controller #5): Enabled - No Link
+[  150.284507] PCI-E: Cheking physical bus #3 (controller #6): Enabled - No Link
+[  150.285239] PCI: bus0: Fast back to back transfers disabled
+[  150.285809] PCI: bus1: Fast back to back transfers disabled
+[  150.286027] pci 0000:01:00.0: BAR 0: assigned [mem 0xf2800000-0xf2807fff 64bit]
+[  150.286044] pci 0000:01:00.0: BAR 0: set to [mem 0xf2800000-0xf2807fff 64bit] (PCI address [0xf2800000-0xf2807fff])
+[  150.286058] pci 0000:00:00.0: BAR 0: assigned [mem 0xf2000000-0xf20fffff 64bit]
+[  150.286073] pci 0000:00:00.0: BAR 0: set to [mem 0xf2000000-0xf20fffff 64bit] (PCI address [0xf2000000-0xf20fffff])
+[  150.286084] pci 0000:00:00.0: BAR 2: can't assign io (size 0x100)
+[  150.286483] cesadev_init(80505f24)
+[  150.287059] Armada XP hwmon thermal sensor initialized.
+[  150.287163] ArmadaXP Power Managament Suspend Operations Initialized
+[  150.287171] Initializing Armada-XP CPU power management  (WFI)
+[  150.287799] audit: initializing netlink socket (disabled)
+[  150.287827] type=2000 audit(2.720:1): initialized
+[  150.288291] VFS: Disk quotas dquot_6.5.2
+[  150.288378] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[  150.289001] msgmni has been set to 2018
+[  150.289850] async_tx: api initialized (async)
+[  150.290016] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 254)
+[  150.290027] io scheduler noop registered
+[  150.290073] io scheduler cfq registered (default)
+[  150.290139] mv_xor_shared mv_xor_shared.0: Marvell shared XOR driver
+[  150.290174] mv_xor_shared mv_xor_shared.1: Marvell shared XOR driver
+[  150.330031] mv_xor mv_xor.0: Marvell XOR: ( xor cpy )
+[  150.370023] mv_xor mv_xor.1: Marvell XOR: ( xor fill cpy )
+[  150.390029] mv_xor mv_xor.2: Marvell XOR: ( xor )
+[  150.410024] mv_xor mv_xor.3: Marvell XOR: ( fill cpy )
+[  150.410478] Serial: 8250/16550 driver, 2 ports, IRQ sharing disabled
+[  150.460204] serial8250.0: ttyS0 at MMIO 0xf1012000 (irq = 41) is a 16550A
+[  151.169761] console [ttyS0] enabled
+[  151.200173] serial8250.1: ttyS1 at MMIO 0xf1012100 (irq = 42) is a 16550A
+[  151.246343] brd: module loaded
+[  151.249409] Loading iSCSI transport class v2.0-870.
+[  151.255240] sata_mv 0000:00:00.0: Gen-IIE 32 slots 4 ports SCSI mode IRQ via INTx
+[  151.265048] scsi0 : sata_mv
+[  151.268234] scsi1 : sata_mv
+[  151.271373] scsi2 : sata_mv
+[  151.274511] scsi3 : sata_mv
+[  151.277607] ata1: SATA max UDMA/133 mmio m1048576@0xf2000000 port 0xf2022000 irq 58
+[  151.285311] ata2: SATA max UDMA/133 mmio m1048576@0xf2000000 port 0xf2024000 irq 58
+[  151.292998] ata3: SATA max UDMA/133 mmio m1048576@0xf2000000 port 0xf2026000 irq 58
+[  151.300682] ata4: SATA max UDMA/133 mmio m1048576@0xf2000000 port 0xf2028000 irq 58
+[  154.810036] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[  154.830397] ata1.00: ATA-9: WDC WD30EZRX-00D8PB0, 80.00A80, max UDMA/133
+[  154.837121] ata1.00: 5860533168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[  154.860390] ata1.00: configured for UDMA/133
+[  154.880251] scsi 0:0:0:0: Direct-Access     WDC      WD30EZRX-00D8PB0         80.0 PQ: 0 ANSI: 5
+[  154.889611] sd 0:0:0:0: [sda] 5860533168 512-byte logical blocks: (3.00 TB/2.72 TiB)
+[  154.897390] sd 0:0:0:0: [sda] 4096-byte physical blocks
+[  154.902777] sd 0:0:0:0: [sda] Write Protect is off
+[  154.907651] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[  155.351527]  sda: sda1 sda2 sda5
+[  155.355878] sd 0:0:0:0: [sda] Attached SCSI disk
+[  157.899005] Delay 5 seconds to wait for disk 2 ready.
+[  165.630039] ata2: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[  165.850061] ata2.00: ATA-9: WDC WD30EZRX-00D8PB0, 80.00A80, max UDMA/133
+[  165.856785] ata2.00: 5860533168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[  165.880387] ata2.00: configured for UDMA/133
+[  165.900252] scsi 1:0:0:0: Direct-Access     WDC      WD30EZRX-00D8PB0         80.0 PQ: 0 ANSI: 5
+[  165.909604] sd 1:0:0:0: [sdb] 5860533168 512-byte logical blocks: (3.00 TB/2.72 TiB)
+[  165.917383] sd 1:0:0:0: [sdb] 4096-byte physical blocks
+[  165.922764] sd 1:0:0:0: [sdb] Write Protect is off
+[  165.927636] sd 1:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[  166.362513]  sdb: sdb1 sdb2 sdb5
+[  166.366815] sd 1:0:0:0: [sdb] Attached SCSI disk
+[  168.919011] Delay 5 seconds to wait for disk 3 ready.
+[  176.470032] ata3: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[  176.690060] ata3.00: ATA-9: WDC WD30EZRX-00D8PB0, 80.00A80, max UDMA/133
+[  176.696784] ata3.00: 5860533168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[  176.720400] ata3.00: configured for UDMA/133
+[  176.740251] scsi 2:0:0:0: Direct-Access     WDC      WD30EZRX-00D8PB0         80.0 PQ: 0 ANSI: 5
+[  176.749588] sd 2:0:0:0: [sdc] 5860533168 512-byte logical blocks: (3.00 TB/2.72 TiB)
+[  176.757365] sd 2:0:0:0: [sdc] 4096-byte physical blocks
+[  176.762746] sd 2:0:0:0: [sdc] Write Protect is off
+[  176.767618] sd 2:0:0:0: [sdc] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[  177.662036]  sdc: sdc1 sdc2 sdc5
+[  177.666325] sd 2:0:0:0: [sdc] Attached SCSI disk
+[  179.748389] Delay 5 seconds to wait for disk 4 ready.
+[  187.840032] ata4: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[  188.060060] ata4.00: ATA-9: WDC WD30EZRX-00D8PB0, 80.00A80, max UDMA/133
+[  188.066784] ata4.00: 5860533168 sectors, multi 0: LBA48 NCQ (depth 31/32)
+[  188.090386] ata4.00: configured for UDMA/133
+[  188.110251] scsi 3:0:0:0: Direct-Access     WDC      WD30EZRX-00D8PB0         80.0 PQ: 0 ANSI: 5
+[  188.119588] sd 3:0:0:0: [sdd] 5860533168 512-byte logical blocks: (3.00 TB/2.72 TiB)
+[  188.120019] sata_mv sata_mv.0: cannot get clkdev
+[  188.120102] sata_mv sata_mv.0: slots 32 ports 2
+[  188.121301] scsi4 : sata_mv
+[  188.121627] scsi5 : sata_mv
+[  188.121920] ata5: SATA max UDMA/133 irq 55
+[  188.121927] ata6: SATA max UDMA/133 irq 55
+[  188.150325] sd 3:0:0:0: [sdd] 4096-byte physical blocks
+[  188.155741] sd 3:0:0:0: [sdd] Write Protect is off
+[  188.160640] sd 3:0:0:0: [sdd] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[  188.242650]  sdd: sdd1 sdd2 sdd5
+[  188.247050] sd 3:0:0:0: [sdd] Attached SCSI disk
+[  188.470016] ata5: SATA link down (SStatus 0 SControl F300)
+[  189.540016] ata6: failed to resume link (SControl 4)
+[  189.545003] ata6: SATA link down (SStatus 0 SControl 4)
+[  189.551288] physmap platform flash device: 00800000 at f0000000
+[  189.558037] physmap-flash physmap-flash.0: map_probe failed
+[  189.566293] SPI Serial flash detected @ 0xf0000000, 8192KB (128sec x 64KB)
+[  189.573209] Searching for RedBoot partition table in SYNOMTD-0 at offset 0x7f0000
+[  189.618605] 6 RedBoot partitions found on MTD device SYNOMTD-0
+[  189.624460] SYNOMTD flash bank 0: Using RedBoot partition definition
+[  189.630835] Creating 6 MTD partitions on "SYNOMTD-0":
+[  189.635904] 0x000000000000-0x0000000d0000 : "RedBoot"
+[  189.641848] 0x0000000d0000-0x0000003a0000 : "zImage"
+[  189.647624] 0x0000003a0000-0x0000007d0000 : "rd.gz"
+[  189.653318] 0x0000007d0000-0x0000007e0000 : "vendor"
+[  189.658383] vender Mac2 checksum error ucSum:0x00 Buf:0x00 Sum:0.
+[  189.664515] vender Mac3 checksum error ucSum:0x00 Buf:0x00 Sum:0.
+[  189.670633] vender Mac4 checksum error ucSum:0xa1 Buf:0x3d Sum:161.
+[  189.676919] vender Mac5 checksum error ucSum:0x5d Buf:0x4e Sum:349.
+[  189.683210] vender Mac7 checksum error ucSum:0x7c Buf:0x37 Sum:380.
+[  189.689499] serial number='1460MEN480000'
+[  189.694155] 0x0000007e0000-0x0000007f0000 : "RedBoot Config"
+[  189.700878] 0x0000007f0000-0x000000800000 : "FIS directory"
+[  189.707385] mv_eth_probe: port_mask=0xf, cpu_mask=0x3 
+[  189.712743]   o 4 Giga ports supported
+[  189.716503]   o SKB recycle supported (Enabled)
+[  189.721052]   o NETA acceleration mode 2
+[  189.724984]   o BM supported for CPU: 4 BM pools
+[  189.729614]   o RX Queue support: 1 Queues * 128 Descriptors
+[  189.735293]   o TX Queue support: 1 Queues * 532 Descriptors
+[  189.740970]   o GSO supported
+[  189.743944]   o GRO supported
+[  189.746918]   o Receive checksum offload supported
+[  189.751724]   o Transmit checksum offload supported
+[  189.756615]   o Driver ERROR statistics enabled
+[  189.761164] 
+[  189.762838]   o Loading network interface(s)
+[  189.767128] 
+[  189.768624]   o Port 0 is connected to Linux netdevice
+[  189.774179] 	giga p=0: mtu=1500, mac=bf835e18
+[  189.782441]     o eth0, ifindex = 2, GbE port = 0
+[  189.786987]     o eth0, phy chipid = 1410dd0, Support WOL = 32
+[  189.793075] 
+[  189.794579] 
+[  189.796074]   o Port 1 is connected to Linux netdevice
+[  189.801618] 	giga p=1: mtu=1500, mac=bf835e18
+[  189.809835]     o eth1, ifindex = 3, GbE port = 1
+[  189.814406]     o eth1, phy chipid = 1410dd0, Support WOL = 32
+[  189.820444] 
+[  189.821941] 
+[  189.821943]   o Warning: GbE port 2 is powered off
+[  189.821947] 
+[  189.829729] 
+[  189.831466] i2c /dev entries driver
+[  189.835504] Syno_HddMon: Initialization completed.
+[  189.840330] md: linear personality registered for level -1
+[  189.845831] md: raid0 personality registered for level 0
+[  189.851164] md: raid1 personality registered for level 1
+[  189.856491] md: raid10 personality registered for level 10
+[  189.861997] md: raid6 personality registered for level 6
+[  189.867323] md: raid5 personality registered for level 5
+[  189.872655] md: raid4 personality registered for level 4
+[  189.878291] device-mapper: ioctl: 4.22.0-ioctl (2011-10-19) initialised: dm-devel@redhat.com
+[  189.886958] cpuidle: using governor ladder
+[  189.891413] cpuidle: using governor menu
+[  189.895484] TCP cubic registered
+[  189.898723] NET: Registered protocol family 17
+[  189.903232] Registering the dns_resolver key type
+[  189.908062] VFP support v0.3: implementor 56 architecture 2 part 20 variant 9 rev 6
+[  189.916233] registered taskstats version 1
+[  189.920648] md: Waiting for all devices to be available before autodetect
+[  189.927457] md: If you don't use raid, use raid=noautodetect
+[  189.933692] md: Autodetecting RAID arrays.
+[  189.973395] md: invalid raid superblock magic on sda5
+[  189.978465] md: sda5 does not have a valid v0.90 superblock, not importing!
+[  190.026976] md: invalid raid superblock magic on sdb5
+[  190.032052] md: sdb5 does not have a valid v0.90 superblock, not importing!
+[  190.079459] md: invalid raid superblock magic on sdc5
+[  190.084539] md: sdc5 does not have a valid v0.90 superblock, not importing!
+[  190.130638] md: invalid raid superblock magic on sdd5
+[  190.135708] md: sdd5 does not have a valid v0.90 superblock, not importing!
+[  190.142712] md: Scanned 12 and added 8 devices.
+[  190.147255] md: autorun ...
+[  190.150066] md: considering sda1 ...
+[  190.153667] md:  adding sda1 ...
+[  190.156915] md: sda2 has different UUID to sda1
+[  190.161478] md:  adding sdb1 ...
+[  190.164723] md: sdb2 has different UUID to sda1
+[  190.169278] md:  adding sdc1 ...
+[  190.172534] md: sdc2 has different UUID to sda1
+[  190.177089] md:  adding sdd1 ...
+[  190.180342] md: sdd2 has different UUID to sda1
+[  190.184928] md: created md0
+[  190.187730] md: bind<sdd1>
+[  190.190490] md: bind<sdc1>
+[  190.193235] md: bind<sdb1>
+[  190.195979] md: bind<sda1>
+[  190.198724] md: running: <sda1><sdb1><sdc1><sdd1>
+[  190.203707] bio: create slab <bio-1> at 1
+[  190.207865] md/raid1:md0: active with 4 out of 4 mirrors
+[  190.213267] md0: detected capacity change from 0 to 2549940224
+[  190.219210] md: considering sda2 ...
+[  190.222821] md:  adding sda2 ...
+[  190.226070] md:  adding sdb2 ...
+[  190.229319] md:  adding sdc2 ...
+[  190.232574] md:  adding sdd2 ...
+[  190.236357] md: created md1
+[  190.239162] md: bind<sdd2>
+[  190.241924] md: bind<sdc2>
+[  190.244664] md: bind<sdb2>
+[  190.247407] md: bind<sda2>
+[  190.250156] md: running: <sda2><sdb2><sdc2><sdd2>
+[  190.255210] md/raid1:md1: active with 4 out of 4 mirrors
+[  190.260613] md1: detected capacity change from 0 to 2147418112
+[  190.266554] md: ... autorun DONE.
+[  190.269973] RAMDISK: lzma image found at block 0
+[  192.016007] VFS: Mounted root (ext2 filesystem) on device 1:0.
+START /linuxrc.syno
+Insert basic USB modules...
+:: Loading module usb-common ... [  OK  ]
+:: Loading module usbcore[  192.106235] usbcore: registered new interface driver usbfs
+[  192.115343] usbcore: registered new interface driver hub
+[  192.126214] usbcore: registered new interface driver ethub
+[  192.137907] usbcore: registered new device driver usb
+ ... [  OK  ]
+:: Loading module ehci-hcd[  192.169221] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[  192.175871] ehci_marvell ehci_marvell.0: Marvell Orion EHCI
+[  192.181583] ehci_marvell ehci_marvell.0: new USB bus registered, assigned bus number 1
+[  192.210027] ehci_marvell ehci_marvell.0: irq 45, io base 0xfbc50100
+[  192.230008] ehci_marvell ehci_marvell.0: USB 2.0 started, EHCI 1.00
+[  192.237078] hub 1-0:1.0: USB hub found
+[  192.240879] hub 1-0:1.0: 1 port detected
+[  192.249866] ehci_marvell ehci_marvell.1: Marvell Orion EHCI
+[  192.255510] ehci_marvell ehci_marvell.1: new USB bus registered, assigned bus number 2
+[  192.290042] ehci_marvell ehci_marvell.1: irq 46, io base 0xfbc51100
+[  192.310044] ehci_marvell ehci_marvell.1: USB 2.0 started, EHCI 1.00
+[  192.317132] hub 2-0:1.0: USB hub found
+[  192.320924] hub 2-0:1.0: 1 port detected
+ ... [  OK  ]
+:: Loading module xhci-hcd ... [  OK  ]
+:: Loading module etxhci-hcd[  192.395137] etxhci_hcd_141015 0000:01:00.0: Etron xHCI Host Controller
+[  192.401756] etxhci_hcd_141015 0000:01:00.0: new USB bus registered, assigned bus number 3
+[  192.419064] etxhci_hcd_141015 0000:01:00.0: Etron chip found.
+[  192.424966] etxhci_hcd_141015 0000:01:00.0: irq 62, io mem 0xf2800000
+[  192.432772] ethub 3-0:1.0: USB hub found
+[  192.436729] ethub 3-0:1.0: 2 ports detected
+[  192.443302] etxhci_hcd_141015 0000:01:00.0: Etron xHCI Host Controller
+[  192.449882] etxhci_hcd_141015 0000:01:00.0: new USB bus registered, assigned bus number 4
+[  192.472117] ethub 4-0:1.0: USB hub found
+[  192.476074] ethub 4-0:1.0: 2 ports detected
+ ... [  OK  ]
+[  192.526508] ds414_synobios: module license 'Synology Inc.' taints kernel.
+[  192.533353] Disabling lock debugging due to kernel taint
+[  192.539906] correction with 0x03
+[  192.545139] 2015-1-6 21:42:55 UTC
+[  192.548471] synobios: load, major number 201
+[  192.552770] Brand: Synology
+[  192.555598] Model: DS-414
+[  192.558238] This is default settings: set group disks wakeup number to 1, spinup time deno 1
+[  192.566736] synobios cpu_arch proc entry initialized
+[  192.571728] synobios crypto_hw proc entry initialized
+[  192.576796] synobios syno_platform proc entry initialized
+mknod: /dev/synobios: File exists
+Starting /usr/syno/bin/synocfgen...
+unknown [  192.590140] usb 1-1: new high-speed USB device number 2 using ehci_marvell
+model: 111, skip updating model info
+/usr/syno/bin/synocfgen returns 0
+[  192.605776] synobios: unload
+Partition Version=7
+ /sbin/e2fsck exists, checking /dev/md0... 
+[  192.864470]  md0: unknown partition table
+1.42.6-4493: |==                                              |  3.7%   1.42.6-4493: |=====                                           / 11.1%   1.42.6-4493: |===================================             - 72.5%   1.42.6-4493: |==========================================      \ 88.3%   1.42.6-4493: |=============================================   | 94.4%   1.42.6-4493: |==============================================  / 95.8%   1.42.6-4493: |=============================================== - 97.5%   1.42.6-4493: |================================================| 100.0%                                                                                  
+       25871 inodes used (16.62%, out of 155648)
+          36 non-contiguous files (0.1%)
+          12 non-contiguous directories (0.0%)
+             # of inodes with ind/dind/tind blocks: 0/0/0
+             Extent depth histogram: 21729/22
+      150531 blocks used (24.18%, out of 622544)
+           0 bad blocks
+           1 large file
+
+       19106 regular files
+        2374 directories
+          76 character device files
+        1613 block device files
+           0 fifos
+        1019 links
+        2692 symbolic links (2422 fast symbolic links)
+           1 socket
+------------
+       26881 files
+/sbin/e2fsck returns 0
+Mounting /dev/md0 /tmpRoot
+[  194.067299] EXT4-fs (md0): barriers disabled
+[  194.080552] EXT4-fs (md0): mounted filesystem with ordered data mode. Opts: 
+------------upgrade
+use default /dev/md0
+Begin upgrade procedure
+No upgrade file exists
+End upgrade procedure
+============upgrade
+Wait 2 seconds for synology manufactory device
+Tue Jan  6 21:42:58 UTC 2015
+/dev/md0 /tmpRoot ext4 rw,relatime,user_xattr,barrier=0,journal_checksum,data=ordered 0 0
+none /sys sysfs rw,relatime 0 0
+linuxrc.syno ex[  196.304567] EXT3-fs (md0): error: couldn't mount because of unsupported optional features (240)
+ecuted successfully.
+[  196.325754] EXT4-fs (md0): mounted filesystem with ordered data mode. Opts: barrier=1
+[  196.333689] VFS: Mounted root (ext4 filesystem) on device 9:0.
+[  196.339540] Trying to move old root to /initrd ... okay
+[  196.356179] Freeing init memory: 196K
+[  197.062101] EXT4-fs (md0): re-mounted. Opts: (null)
+==================== start udevd ====================
+[  198.970938] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[  198.976466] sd 1:0:0:0: Attached scsi generic sg1 type 0
+[  198.982456] sd 2:0:0:0: Attached scsi generic sg2 type 0
+[  198.987978] sd 3:0:0:0: Attached scsi generic sg3 type 0
+[  199.297626]  md1: unknown partition table
+[  199.363009] Adding 2097084k swap on /dev/md1.  Priority:-1 extents:1 across:2097084k 
+[  199.958127] init: syno-auth-check main process (1069) killed by TERM signal
+[  200.020030] NET: Registered protocol family 10
+[  200.255494] IPv6 over IPv4 tunneling driver
+[  200.693819] mvCesaInit: channels=2, session=640, queue=64
+[  200.750126] encryptfs using the OCF package.
+[  201.003131] fuse init (API version 7.10022)
+[  201.014373] systemd-udevd[1553]: starting version 204
+===== trigger device plug event =====
+[  201.606970] correction with 0x03
+[  201.642773] 2015-1-6 21:43:4 UTC
+[  201.646030] synobios: load, major number 201
+[  201.650396] Brand: Synology
+[  201.653227] Model: DS-414
+[  201.655874] This is default settings: set group disks wakeup number to 1, spinup time deno 1
+[  201.664448] synobios cpu_arch proc entry initialized
+[  201.669445] synobios crypto_hw proc entry initialized
+[  201.674549] synobios syno_platform proc entry initialized
+[  204.029639] eth0: mac address changed
+[  204.118794] eth1: mac address changed
+[  204.455414] pool #0: pkt_size=1536, buf_size=1632 - 2048 of 2048 buffers added
+[  204.466758] pool #2: pkt_size=256, buf_size=352 - 3072 of 3072 buffers added
+[  204.473968] eth0: link up
+[  204.476630] eth0: started
+[  204.529597] pool #1: pkt_size=1536, buf_size=1632 - 2048 of 2048 buffers added
+[  204.541318] pool #3: pkt_size=256, buf_size=352 - 3072 of 3072 buffers added
+[  204.548450] eth1: started
+[  204.551584] ADDRCONF(NETDEV_UP): eth1: link is not ready
+[  204.630734] init: dhcp-client (eth0) main process (3493) terminated with status 15
+[  205.230868] init: dhcp-client (eth0) main process (3564) terminated with status 15
+[  205.355407] init: dhcp-client (eth1) main process (3520) terminated with status 15
+[  206.180920] init: dhcp-client (eth0) main process (3724) terminated with status 15
+[  207.837257] md: md2 still in use.
+[  207.913690] md: bind<sdc5>
+[  207.933683] md: bind<sdb5>
+[  207.949881] md: bind<sda5>
+[  207.993663] md: bind<sdd5>
+[  208.032288] md/raid:md2: device sdd5 operational as raid disk 0
+[  208.038299] md/raid:md2: device sda5 operational as raid disk 3
+[  208.044278] md/raid:md2: device sdb5 operational as raid disk 2
+[  208.050235] md/raid:md2: device sdc5 operational as raid disk 1
+[  208.057163] md/raid:md2: allocated 4230kB
+[  208.136857] md/raid:md2: raid level 5 active with 4 out of 4 devices, algorithm 2
+[  208.144740] md2: detected capacity change from 0 to 8987233222656
+[  208.161493]  md2: unknown partition table
+[  210.692722] ip_tables: (C) 2000-2006 Netfilter Core Team
+[  210.756619] nf_conntrack version 0.5.0 (16152 buckets, 64608 max)
+[  211.232155] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[  212.289326] EXT4-fs (dm-1): barriers disabled
+[  214.382230] EXT4-fs (dm-1): recovery complete
+[  214.440608] EXT4-fs (dm-1): mounted filesystem with writeback data mode. Opts: usrjquota=aquota.user,grpjquota=aquota.group,jqfmt=vfsv0,synoacl,data=writeback,oldalloc
+[  215.517378] Initializing USB Mass Storage driver...
+[  215.538640] scsi6 : usb-storage 1-1:1.0
+[  215.542792] usbcore: registered new interface driver usb-storage
+[  215.548827] USB Mass Storage support registered.
+[  215.609702] usbcore: registered new interface driver usblp
+[  215.660521] ata1.00: configured for UDMA/133
+[  215.664841] ata1: EH complete
+[  215.668846] ata4.00: configured for UDMA/133
+[  215.673223] ata4: EH complete
+[  215.676904] ata2.00: configured for UDMA/133
+[  215.681234] ata2: EH complete
+[  215.700455] ata3.00: configured for UDMA/133
+[  215.704757] ata3: EH complete
+[  215.719298] usbcore: registered new interface driver usbhid
+[  215.724991] usbhid: USB HID core driver
+[  216.617186] scsi 6:0:0:0: Direct-Access     TOSHIBA  TransMemory              PMAP PQ: 0 ANSI: 0 CCS
+[  216.632239] sd 6:0:0:0: Attached scsi generic sg4 type 0
+
+flokli-nas login: [  218.667871] sd 6:0:0:0: [sdq] 15240576 512-byte logical blocks: (7.80 GB/7.26 GiB)
+[  218.700307] sd 6:0:0:0: [sdq] Write Protect is off
+[  218.706154] sd 6:0:0:0: [sdq] No Caching mode page present
+[  218.711679] sd 6:0:0:0: [sdq] Assuming drive cache: write through
+[  218.725354] sd 6:0:0:0: [sdq] No Caching mode page present
+[  218.730921] sd 6:0:0:0: [sdq] Assuming drive cache: write through
+[  218.757906]  sdq: unknown partition table
+[  218.769125] sd 6:0:0:0: [sdq] No Caching mode page present
+[  218.774659] sd 6:0:0:0: [sdq] Assuming drive cache: write through
+[  218.780832] sd 6:0:0:0: [sdq] Attached SCSI removable disk
+[  218.800714] ata1.00: configured for UDMA/133
+[  218.805010] ata1: EH complete
+[  219.091948] ata1.00: Disable disk write cache in EH
+[  219.150844] ata2.00: configured for UDMA/133
+[  219.155333] ata2: EH complete
+[  219.483206] ata2.00: Disable disk write cache in EH
+[  219.560880] ata3.00: configured for UDMA/133
+[  219.565374] ata3: EH complete
+[  219.891444] ata3.00: Disable disk write cache in EH
+[  219.950914] ata4.00: configured for UDMA/133
+[  219.955403] ata4: EH complete
+[  220.140613] ata4.00: Disable disk write cache in EH
+[  222.687353] EXT3-fs (sdq): error: couldn't mount because of unsupported optional features (240)
+[  222.719374] EXT4-fs (sdq): barriers disabled
+[  222.744525] EXT4-fs (sdq): mounted filesystem with ordered data mode. Opts: nodelalloc,synoacl,data=ordered,oldalloc
+[  225.383359] netlink: 12 bytes leftover after parsing attributes.
+[  226.998536] init: smbd main process (7283) killed by HUP signal
+[  227.005095] init: smbd main process ended, respawning
+[  229.079317] loop: module loaded
+[  232.452112] findhostd uses obsolete (PF_INET,SOCK_PACKET)
