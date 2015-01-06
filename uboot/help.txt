@@ -1,0 +1,153 @@
+help
+?       - alias for 'help'
+SatR    - Sample At Reset sub-system
+
+WOLTest - WOLTest       - Wake On Lan u-boot testing
+
+amp_boot- amp_boot - boot an AMP group
+
+amp_config- Fully config an AMP group
+
+amp_printenv- amp_printenv - print only AMP env variables
+
+amp_verify- Verfiy AMP configuration
+
+base    - print or set address offset
+bdinfo  - print Board Info structure
+bios    - BIOS command to set the DB configuration.
+
+boot    - boot default, i.e., run 'bootcmd'
+bootd   - boot default, i.e., run 'bootcmd'
+bootelf - Boot from an ELF image in memory
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootvx  - Boot vxWorks from an ELF image
+bubt    - bubt  - Burn an image on the Boot SPI Flash.
+
+chpart  - change active partition
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+crc32   - checksum calculation
+date    - get/set/reset date & time
+ddrPhyRead- ddrPhyRead - Read DDR PHY register
+
+ddrPhyWrite- ddrPhyWrite - Write DDR PHY register
+
+dhcp    - boot image via network using DHCP/TFTP protocol
+diskboot- diskboot- boot from IDE device
+
+dma     - dma   - Perform DMA using the XOR engine
+
+echo    - echo args to console
+editenv - edit environment variable
+eeprom  - EEPROM sub-system
+env     - environment handling commands
+exit    - exit script
+ext2load- load binary file from a Ext2 filesystem
+ext2ls  - list files in a directory (default /)
+false   - do nothing, unsuccessfully
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+fsinfo  - print information about filesystems
+fsload  - load binary file from a filesystem image
+go      - start application at address 'addr'
+help    - print command description/usage
+i2c     - I2C sub-system
+ide     - ide     - IDE sub-system
+
+iminfo  - print header information for application image
+imxtract- extract a part of a multi-image
+ir      - ir    - reading and changing MV internal register values.
+
+itest   - return true/false on integer compare
+loadb   - load binary file over serial line (kermit mode)
+loads   - load S-Record file over serial line
+loadx   - load binary file over serial line (xmodem mode)
+loady   - load binary file over serial line (ymodem mode)
+loop    - infinite loop on address range
+ls      - list files in a directory (default /)
+map     - map   - Diasplay address decode windows
+
+md      - memory display
+me      - me    - PCI master enable
+
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - display MMC info
+mp      - mp    - map PCI BAR
+
+mtdparts- define flash/nand partitions
+mtest   - simple RAM read/write test
+mw      - memory write (fill)
+nfs     - boot image via network using NFS protocol
+nm      - memory modify (constant address)
+pci     - list and access PCI Configuration Space
+pciePhyRead- phyRead    - Read PCI-E Phy register
+
+pciePhyWrite- pciePhyWrite      - Write PCI-E Phy register
+
+phyRead - phyRead       - Read Phy register
+
+phyWrite- phyWrite      - Write Phy register
+
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+pxe     - commands to get and boot from pxe files
+rcvr    - rcvr  - Satrt recovery process (Distress Beacon with TFTP server)
+
+reset   - Perform RESET of the CPU
+resetenv- resetenv      - earse environment sector to reset all variables to default.
+
+run     - run commands in an environment variable
+saveenv - save environment variables to persistent storage
+scsi    - SCSI sub-system
+scsiboot- boot from SCSI device
+se      - se    - PCI Slave enable
+
+setenv  - set environment variables
+sf      - SPI flash sub-system
+sg      - sg    - scanning the PHYs status
+
+showvar - print local hushshell variables
+sleep   - delay execution for some time
+source  - run script from memory
+sp      - sp    - Scan PCI Interface [bus].
+
+sspi    - SPI utility command
+stage_boot- command to load script/image from different devices
+        example: stage_boot hd_img pxe
+syno_pwoff- syno_pwoff    - bring the system down
+
+temp    - temp  - Display the device temprature.
+
+tempCmd0- tempCmd - This command allocated for monitor extintion
+
+tempCmd1- tempCmd - This command allocated for monitor extintion
+
+tempCmd2- tempCmd - This command allocated for monitor extintion
+
+tempCmd3- tempCmd - This command allocated for monitor extintion
+
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+training- training      - prints the results of the DDR3 Training.
+
+true    - do nothing, successfully
+ts_report- ts_report    - report touch screen cooridate
+
+ts_test - ts_test       - test touch screen
+
+ubi     - ubi commands
+ubifsload- load file from an UBIFS filesystem
+ubifsls - list files in a directory
+ubifsmount- mount UBIFS volume
+ubifsumount- unmount UBIFS volume
+usb     - USB sub-system
+usbboot - boot from USB device
+version - print monitor, compiler and linker version
+warmRst - warmRst       - Warn Reset AXP card over PEX.
+
+whoAmI  - - reading CPU ID
+
